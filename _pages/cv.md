@@ -6,4 +6,7 @@ author_profile: true
 redirect_from:
   - /resume
 ---
-blabla
+
+{% include base_path %}
+
+<object data="../files/CV_Daran.pdf" width="1000" height="1000" type='application/pdf'></object>
