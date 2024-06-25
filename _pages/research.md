@@ -7,7 +7,10 @@ author_profile: true
 
 # Work in progress
 
-* **Can agricultural trade promote international climate cooperation?** (In progress)
+* **Agriculture in climate negotiations** with Basak Bayramoglu, Christophe Cassen and Laurent Lamy (in progress).
+
+  
+* **Can agricultural trade promote international climate cooperation?** (in progress)
 
 
 
