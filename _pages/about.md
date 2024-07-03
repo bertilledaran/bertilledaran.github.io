@@ -11,4 +11,4 @@ I am a PhD candidate in environmental economics at [Paris-Saclay Applied Economi
 
 Reseach interest
 ======
-International Environmental Agreements (IEAs), agricultural trade, land-use choices, optimal climate measures, general equilibrium, game-theory, spatial and causal econometrics
+International Environmental Agreements (IEAs), agricultural trade, land-use choices, optimal climate measures, general equilibrium, game-theory, survey design and analysis, spatial and causal econometrics
