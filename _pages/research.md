@@ -19,7 +19,7 @@ author_profile: true
 
 ##  Global Food Security (GloFoodS) project
 
-* [Updating the association between socioeconomic status and obesity in low‐income and lower‐middle‐income sub‐Saharan African countries: A literature review](https://link.springer.com/article/10.1007/s41885-020-00060-5), Obesity Reviews,  2023, vol. 24, no 10, p. e13601, _with Pierre Levasseur and Clément Mathieu_
+* [Updating the association between socioeconomic status and obesity in low‐income and lower‐middle‐income sub‐Saharan African countries: A literature review](https://onlinelibrary.wiley.com/doi/10.1111/obr.13601), Obesity Reviews,  2023, vol. 24, no 10, p. e13601, _with Pierre Levasseur and Clément Mathieu_
 
     <details><summary>Abstract</summary><p align="justify"><em>Globally, the literature tends to emphasize negative associations between socioeconomic status (SES) and bodyweight in countries improving their economic development. However, little is known about the social distribution of obesity in sub-Saharan Africa (SSA) where economic growth has been highly heterogeneous the last decades. This paper reviews an exhaustive set of recent empirical studies examining its association in low-income and lower-middle-income countries in SSA. Although there is evidence of a positive association between SES and obesity in low-income countries, we found mixed associations in lower-middle-income countries, potentially providing evidence of a social reversal of the obesity burden.</em></p></details>
 
