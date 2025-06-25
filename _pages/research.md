@@ -7,10 +7,18 @@ author_profile: true
 
 # Work in progress
 
-* **Agriculture in climate negotiations** with Basak Bayramoglu, Christophe Cassen and Laurent Lamy (in progress).
-
   
 * **Can agricultural trade promote international climate cooperation?** (in progress).
+
+<details><summary>Abstract</summary><p align="justify"><em> International efforts to establish effective and unified climate policies have faced persistent challenges. The agricultural trade sector could play a key role in supporting global climate action, given its unique ties to both food systems and climate change. However, in the absence of targeted climate policies, trade liberalization may lead to unintended environmental consequences. This paper investigates whether reducing agricultural trade tariffs can strengthen climate cooperation and mitigate free-riding behavior. We develop a general equilibrium model that captures essential agricultural characteristics in an open economy and apply it to a club formation game involving climate policy instruments, designed according to agriculture-specificities. Taking it to the data, we simulate a dynamic coalition formation scenario involving different behavioral responses of countries. Preliminary results suggest that agricultural trade liberalization can indeed incentivize countries to join a stable climate coalition, and result in a significant decrease in GHG emissions</em></p></details>
+
+
+* **The deforestation effect of climate aid**, with Clément Nedoncelle (in progress).
+
+<details><summary>Abstract</summary><p align="justify"><em>Climate aid is an international financial flow that promotes mitigation and adaptation to climate change while supporting local economic development. These flows may have unintended consequences, potentially exacerbating environmental degradation. This study examines the impact of climate aid on deforestation in Africa from 2001 to 2021. Using a novel dataset of geocoded aid projects classified as pursuing climate-related objectives by applying a machine learning model, we find preliminary evidence of a causal link between climate aid and forest loss: deforestation increases in areas where climate aid projects are disbursed. Preliminary mechanisms analysis suggests that the effects are driven by local economic activities and new agricultural expansion. However, effects vary by initial forest cover: aid increases deforestation in densely forested areas, while it appears to reduce deforestation where forest cover was initially sparse.</em></p></details>
+
+
+* **From farm to COP:climate experts’ views on agriculture in international climate negotiations** with Basak Bayramoglu, Christophe Cassen, and Laurent Lamy (in progress).
 
 
 
