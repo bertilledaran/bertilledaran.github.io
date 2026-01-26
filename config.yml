@@ -56,7 +56,7 @@ params:
           enabled: true
           title: Bertille Daran
           subtitle: "I am a PhD candidate in environmental economics at [Paris-Saclay Applied Economics (PSAE)](https://eng-psae.versailles-saclay.hub.inrae.fr/) and [CIRED](https://www.centre-cired.fr/en/). My research links what I call climate diplomacy (climate negotiations, cooperation, and finance) to land use, and in particular, agriculture, livestock, and forest conservation. I am working with different quantitative and qualitative methodologies: spatial and quantitative trade model, game-theory framework, causal econometric evaluation, and survey and textual analysis."
-          imageUrl: "picture.jpeg"
+          imageUrl: "profile.jpg"
           imageWidth: 160
           imageHeight: 160
           buttons:
