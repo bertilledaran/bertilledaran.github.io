@@ -55,49 +55,51 @@ params:
     profileMode:
           enabled: true
           title: Bertille Daran
-          subtitle: "I am a PhD candidate in environmental economics at [Paris-Saclay Applied Economics (PSAE)](https://eng-psae.versailles-saclay.hub.inrae.fr/) and [CIRED](https://www.centre-cired.fr/en/), under the supervision of [Basak Bayramoglu](https://sites.google.com/site/basakbayramoglu/home) and [Laurent Lamy](https://sites.google.com/site/laurentlamy78/vitae). My research links what I call climate diplomacy (climate negotiations, cooperation, and finance) to land use, and in particular, agriculture, livestock, and forest conservation. I am working with different quantitative and qualitative methodologies: spatial and quantitative trade model, game-theory framework, causal econometric evaluation, and survey and textual analysis."
+          subtitle: "I am a PhD candidate in environmental economics at [Paris-Saclay Applied Economics (PSAE)](https://eng-psae.versailles-saclay.hub.inrae.fr/) and [CIRED](https://www.centre-cired.fr/en/). My research links what I call climate diplomacy (climate negotiations, cooperation, and finance) to land use, and in particular, agriculture, livestock, and forest conservation. I am working with different quantitative and qualitative methodologies: spatial and quantitative trade model, game-theory framework, causal econometric evaluation, and survey and textual analysis."
           imageUrl: "picture.jpeg"
           imageWidth: 160
           imageHeight: 160
           buttons:
-            - name: Papers
-              url: papers/
-            - name: Data
-              url: data/
-            - name: Books
-              url: books/
-            - name: Courses
-              url: courses/
-            - name: Tags
-              url: tags/
-            - name: Archive
-              url: archive/
-            - name: Blog
-              url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
+            - name: Research
+              url: research/
+            - name: Teaching
+              url: teaching/
+            - name: Talks
+              url: talks/
+            # - name: Courses
+            #   url: courses/
+            # - name: Tags
+            #   url: tags/
+            # - name: Archive
+            #   url: archive/
+            # - name: Blog
+            #   url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
 
     socialIcons:
         - name: CV
           url: cv.pdf
         - name: Email
-          url: mailto:igelfeld@regensburg.edu
-        - name: Zoom
-          url: https://www.zoom.us/my/igelfeld
+          url: mailto:bertille.daran@sciencespo.fr
+        # - name: Zoom
+        #   url: https://www.zoom.us/my/igelfeld
         - name: Location
-          url: location/
-        - name: Office Hours
-          url: officehours/
+          url: https://share.google/V2efwAHkEI20lWVPO
+        # - name: Office Hours
+        #   url: officehours/
         - name: Google Scholar
-          url: https://scholar.google.com/citations?user=cL23w-4AAAAJ
+          url: https://scholar.google.fr/citations?user=3dGN0zEAAAAJ&hl=fr&oi=ao
         - name: GitHub
-          url: https://github.com/pmichaillat
-        - name: Substack
-          url: https://pmichaillat.substack.com
-        - name: YouTube
-          url: https://www.youtube.com/@pmichaillat
-        - name: Twitter
-          url: https://x.com/pmichaillat
-        - name: Bluesky
-          url: https://bsky.app/profile/pmichaillat.bsky.social
+          url: https://github.com/bertilledaran
+        - name: LinkedIn
+          url: www.linkedin.com/in/bertille-daran
+        # - name: Substack
+        #   url: https://pmichaillat.substack.com
+        # - name: YouTube
+        #   url: https://www.youtube.com/@pmichaillat
+        # - name: Twitter
+        #   url: https://x.com/pmichaillat
+        # - name: Bluesky
+        #   url: https://bsky.app/profile/pmichaillat.bsky.social
 
     assets:
         disableScrollBarStyle: true
@@ -105,7 +107,7 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Moritz-Maria von Igelfeld"
+      text: "Bertille Daran"
       icon: favicon.ico
       iconHeight: 18
 
