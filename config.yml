@@ -83,7 +83,7 @@ params:
         # - name: Zoom
         #   url: https://www.zoom.us/my/igelfeld
         - name: Location
-          url: https://share.google/V2efwAHkEI20lWVPO
+          url: https://maps.app.goo.gl/ah3jGxzdRA8qm31K7
         # - name: Office Hours
         #   url: officehours/
         - name: Google Scholar
