@@ -12,21 +12,21 @@ taxonomies:
 
 menu:
     main:
-        - name: Books
-          url: books/
+        - name: Research
+          url: research/
           weight: 5 
-        - name: Papers
-          url: papers/
+        - name: Teaching
+          url: teaching/
           weight: 2
-        - name: Courses
-          url: courses/
+        - name: Talks
+          url: talks/
           weight: 3
-        - name: Data
-          url: data/
-          weight: 4 
-        - name: Blog
-          url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
-          weight: 6
+        # - name: Data
+        #   url: data/
+        #   weight: 4 
+        # - name: Blog
+        #   url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
+        #   weight: 6
 
 params:
     description: "This website hosts Moritz-Maria von Igelfeld's research papers, books, course materials, data, curriculum vitae, and contact information."
@@ -54,8 +54,8 @@ params:
     math: true
     profileMode:
           enabled: true
-          title: Professor Dr von Igelfeld
-          subtitle: "I am a Professor in the Institute of Romance Philology at the University of Regensburg, Germany. My research focuses on Portuguese irregular verbs. I was a doctoral student of Professor Dr Dieter Vogelsang in Munich, and later a second assistant of Professor Walter Schoeffler-Henschell at the University of Wiesbaden."
+          title: Bertille Daran
+          subtitle: "I am a PhD candidate in environmental economics at [Paris-Saclay Applied Economics (PSAE)](https://eng-psae.versailles-saclay.hub.inrae.fr/) and [CIRED](https://www.centre-cired.fr/en/), under the supervision of [Basak Bayramoglu](https://sites.google.com/site/basakbayramoglu/home) and [Laurent Lamy](https://sites.google.com/site/laurentlamy78/vitae). My research links what I call climate diplomacy (climate negotiations, cooperation, and finance) to land use, and in particular, agriculture, livestock, and forest conservation. I am working with different quantitative and qualitative methodologies: spatial and quantitative trade model, game-theory framework, causal econometric evaluation, and survey and textual analysis."
           imageUrl: "picture.jpeg"
           imageWidth: 160
           imageHeight: 160
