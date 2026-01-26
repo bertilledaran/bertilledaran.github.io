@@ -44,7 +44,7 @@ params:
     ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
-    MainSections: ["books","courses","papers","data"]
+    MainSections: ["research","teaching","talks"]
     ShowToc: false
     disableScrollToTop: true
     TocOpen: true
@@ -83,7 +83,7 @@ params:
         # - name: Zoom
         #   url: https://www.zoom.us/my/igelfeld
         - name: Location
-          url: https://maps.app.goo.gl/ah3jGxzdRA8qm31K7
+          url: location/
         # - name: Office Hours
         #   url: officehours/
         - name: Google Scholar
