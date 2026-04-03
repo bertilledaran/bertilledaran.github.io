@@ -41,6 +41,26 @@
       <p>{{ .Summary | plainify | htmlUnescape }}</p>
     </div>
     {{- end }}
+    {{- with .Params.abstract }}
+    <details class="post-content">
+      <summary><strong>Abstract</strong></summary>
+      <div class="post-content">
+        {{ . | markdownify }}
+      </div>
+    </details>
+    {{- end }}
+    {{- with .Params.links }}
+    <details class="post-content">
+      <summary><strong>Links</strong></summary>
+      <div class="post-content">
+        <ul>
+          {{- range . }}
+          <li><a href="{{ .url }}">{{ .name }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
+    </details>
+    {{- end }}
     {{- if .Content }}
     <div class="post-content">
       {{- if not (.Param "disableAnchoredHeadings") }}
