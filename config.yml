@@ -49,7 +49,7 @@ params:
   profileMode:
     enabled: true
     title: Bertille Daran
-    subtitle: "I am an **environmental economist** with a PhD from Institut Polytechnique Paris ([manuscript](/jmp.pdf), slides), graduated in February 2026.  \n\n\n My research focuses on the interdependencies between *international flows*, both economic and human, and *land cover and land use*. My thesis addresses three dimensions of climate diplomacy: negotiations, cooperation, and finance. I use quantitative spatial models and advanced econometric techniques, combining them with complementary methods such as natural language processing and elite surveys.  \n\n\nI will begin a position as a postdoctoral fellow at Université Paris Dauphine-PSL in Fall 2026.  \n\nFeel free to reach out by [email](mailto:bertille.daran@sciencespo.fr)."
+    subtitle: "I am an **environmental economist** with a PhD from Institut Polytechnique Paris ([manuscript](/jmp.pdf), slides), graduated in February 2026.  <b> My research focuses on the interdependencies between *international flows*, both economic and human, and *land cover and land use*. My thesis addresses three dimensions of climate diplomacy: negotiations, cooperation, and finance. I use quantitative spatial models and advanced econometric techniques, combining them with complementary methods such as natural language processing and elite surveys.  <b> I will begin a position as a postdoctoral fellow at Université Paris Dauphine-PSL in Fall 2026.  \n\nFeel free to reach out by [email](mailto:bertille.daran@sciencespo.fr)."
     imageUrl: "profile.jpg"
     imageWidth: 180
     imageHeight: 180
