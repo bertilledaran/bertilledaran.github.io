@@ -1,6 +1,6 @@
 ---
 title: "The deforestation effect of climate aid"
-date: 2025-13-10
+date: 2025-10-13
 summary: "Work in progress with Clement Nedoncelle."
 author: ["Bertille Daran", "Clement Nedoncelle"]
 researchSection: "working-paper"
