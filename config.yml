@@ -24,7 +24,7 @@ menu:
       weight: 30
 
 params:
-  description: "Academic website of Bertille Daran, PhD candidate in environmental economics."
+  description: ""
   author: Bertille Daran
   DateFormat: "January 2006"
   defaultTheme: light
