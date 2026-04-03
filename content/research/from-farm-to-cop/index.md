@@ -1,9 +1,7 @@
 ---
-title: "From Farm to COP"
-date: 2026-01-01
+title: "From farm to COP: climate experts' views on agriculture in international climate negotiations"
+date: 2025-07-01
 summary: "Ongoing work on climate experts' views on agriculture in international climate negotiations."
-description: "Ongoing work on agriculture in international climate negotiations."
-tags: ["climate diplomacy", "agriculture", "international climate negotiations"]
 author: ["Bertille Daran", "Basak Bayramoglu", "Christophe Cassen", "Laurent Lamy"]
 researchSection: "ongoing"
 weight: 20
@@ -13,6 +11,12 @@ weight: 20
 
 Ongoing work.
 
+## Coauthors
+
+- [Basak Bayramoglu](https://sites.google.com/site/basakbayramoglu/home)
+- [Christophe Cassen](https://www.centre-cired.fr/christophe-cassen/)
+- [Laurent Lamy](https://sites.google.com/site/laurentlamy78/)
+
 ## Overview
 
-This project studies how climate experts position agriculture within international climate negotiations. It sits at the intersection of climate diplomacy, land-use policy, and environmental economics.
+This project studies how climate experts position agriculture within international climate negotiations, using original survey responses.
