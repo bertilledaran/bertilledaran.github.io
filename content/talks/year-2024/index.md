@@ -1,6 +1,7 @@
 ---
 title: "Talks and Conferences in 2024"
 date: 2024-01-01
+draft: true
 summary: "Conferences and workshops in 2024."
 description: "Conferences and workshops listed for 2024."
 tags: ["talks", "conference", "2024"]

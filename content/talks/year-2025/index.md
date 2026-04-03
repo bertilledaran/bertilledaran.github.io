@@ -1,6 +1,7 @@
 ---
 title: "Talks and Conferences in 2025"
 date: 2025-01-01
+draft: true
 summary: "Conferences, workshops, and summer school in 2025."
 description: "Conferences and workshops listed for 2025."
 tags: ["talks", "conference", "2025"]

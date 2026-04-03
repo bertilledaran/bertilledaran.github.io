@@ -62,7 +62,7 @@ params:
         url: talks/
   socialIcons:
     - name: CV
-      url: static/cv/
+      url: /cv.pdf
     - name: Email
       url: mailto:bertille.daran@sciencespo.fr
     - name: Location
