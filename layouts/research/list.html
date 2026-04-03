@@ -81,7 +81,7 @@
             {{- with .Params.abstract }}
             <details class="post-content research-paper-panel">
               <summary><strong>Abstract</strong></summary>
-              <div class="post-content">
+              <div class="post-content", text-align="justify", text-justif="inter-word">
                 {{ . | markdownify }}
               </div>
             </details>
