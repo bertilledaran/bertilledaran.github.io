@@ -16,95 +16,114 @@
 {{- $published := where $pages "Params.researchSection" "published" }}
 
 {{- $sections := slice
-  (dict "title" "Working Papers" "pages" $working)
-  (dict "title" "Ongoing Work" "pages" $ongoing)
-  (dict "title" "Published Work" "pages" $published)
+  (dict "id" "working-papers" "kicker" "In Progress" "title" "Working Papers" "description" "Complete drafts and job-market style papers available for circulation." "pages" $working)
+  (dict "id" "ongoing-work" "kicker" "In Development" "title" "Ongoing Work" "description" "Projects under active development, from design to empirical implementation." "pages" $ongoing)
+  (dict "id" "published-work" "kicker" "Published" "title" "Published Work" "description" "Peer-reviewed articles and publications in edited outlets." "pages" $published)
 }}
 
-{{- range $section := $sections }}
-  {{- if gt (len $section.pages) 0 }}
-  <section class="post-content">
-    <h2>{{ $section.title }}</h2>
-  </section>
-  {{- range $section.pages }}
-  <article class="post-single">
-    <header class="entry-header">
-      <h3 class="entry-hint-parent">{{ .Title }}</h3>
-      <div class="entry-footer">
-        {{- $meta := slice }}
-        {{- if not .Date.IsZero }}
-          {{- $meta = $meta | append (printf "<span title='%s'>%s</span>" .Date (.Date | time.Format (default "January 2006" site.Params.DateFormat))) }}
-        {{- end }}
-        {{- with .Params.status }}
-          {{- $meta = $meta | append . }}
-        {{- end }}
-        {{- if .Params.authorsDetailed }}
-          {{- $authors := slice }}
-          {{- range .Params.authorsDetailed }}
-            {{- if .url }}
-              {{- $authors = $authors | append (printf "<a href='%s'>%s</a>" .url .name) }}
-            {{- else }}
-              {{- $authors = $authors | append .name }}
+<div class="research-sections">
+  {{- range $section := $sections }}
+    {{- if gt (len $section.pages) 0 }}
+    <section class="research-section" id="{{ $section.id }}">
+      <header class="research-section-header">
+        <div class="research-section-copy post-content">
+          <p class="research-section-kicker">{{ $section.kicker }}</p>
+          <h2>{{ $section.title }}</h2>
+          <p class="research-section-description">{{ $section.description }}</p>
+        </div>
+        <p class="research-section-count">{{ len $section.pages }} {{ cond (eq (len $section.pages) 1) "paper" "papers" }}</p>
+      </header>
+
+      <div class="research-paper-list">
+        {{- range $section.pages }}
+        <article class="post-single research-paper-card">
+          <header class="entry-header research-paper-header">
+            <div class="research-paper-title-wrap">
+              <h3 class="entry-hint-parent research-paper-title">{{ .Title }}</h3>
+              {{- with .Params.status }}
+              <p class="research-paper-status">{{ . }}</p>
+              {{- end }}
+            </div>
+            <div class="entry-footer research-paper-meta">
+              {{- $meta := slice }}
+              {{- if not .Date.IsZero }}
+                {{- $meta = $meta | append (printf "<span title='%s'>%s</span>" .Date (.Date | time.Format (default "January 2006" site.Params.DateFormat))) }}
+              {{- end }}
+              {{- if .Params.authorsDetailed }}
+                {{- $authors := slice }}
+                {{- range .Params.authorsDetailed }}
+                  {{- if .url }}
+                    {{- $authors = $authors | append (printf "<a href='%s'>%s</a>" .url .name) }}
+                  {{- else }}
+                    {{- $authors = $authors | append .name }}
+                  {{- end }}
+                {{- end }}
+                {{- $meta = $meta | append (delimit $authors ", ") }}
+              {{- else if not (.Param "hideAuthor") }}
+                {{- with (partial "author.html" .) }}
+                  {{- $meta = $meta | append . }}
+                {{- end }}
+              {{- end }}
+              {{- with .Params.publication }}
+                {{- $meta = $meta | append . }}
+              {{- end }}
+              {{- delimit $meta "&nbsp;&middot;&nbsp;" | safeHTML -}}
+            </div>
+          </header>
+
+          {{- if (ne (.Param "hideSummary") true) }}
+          <div class="post-content research-paper-summary">
+            <p>{{ .Summary | plainify | htmlUnescape }}</p>
+          </div>
+          {{- end }}
+
+          <div class="research-paper-panels">
+            {{- with .Params.abstract }}
+            <details class="post-content research-paper-panel">
+              <summary><strong>Abstract</strong></summary>
+              <div class="post-content">
+                {{ . | markdownify }}
+              </div>
+            </details>
             {{- end }}
+            {{- with .Params.links }}
+            <details class="post-content research-paper-panel">
+              <summary><strong>Links</strong></summary>
+              <div class="post-content">
+                <ul>
+                  {{- range . }}
+                  <li><a href="{{ .url }}">{{ .name }}</a></li>
+                  {{- end }}
+                </ul>
+              </div>
+            </details>
+            {{- end }}
+          </div>
+
+          {{- if .Content }}
+          <div class="post-content research-paper-body">
+            {{- if not (.Param "disableAnchoredHeadings") }}
+            {{- partial "anchored_headings.html" .Content -}}
+            {{- else }}{{ .Content }}{{ end }}
+          </div>
           {{- end }}
-          {{- $meta = $meta | append (delimit $authors ", ") }}
-        {{- else if not (.Param "hideAuthor") }}
-          {{- with (partial "author.html" .) }}
-            {{- $meta = $meta | append . }}
+
+          {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+          {{- if gt (len ($.GetTerms $tags)) 0 }}
+          <footer class="post-footer research-paper-footer">
+            <ul class="post-tags">
+              {{- range ($.GetTerms $tags) }}
+              <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+              {{- end }}
+            </ul>
+          </footer>
           {{- end }}
+        </article>
         {{- end }}
-        {{- with .Params.publication }}
-          {{- $meta = $meta | append . }}
-        {{- end }}
-        {{- delimit $meta "&nbsp;&middot;&nbsp;" | safeHTML -}}
       </div>
-    </header>
-    {{- if (ne (.Param "hideSummary") true) }}
-    <div class="post-content">
-      <p>{{ .Summary | plainify | htmlUnescape }}</p>
-    </div>
+    </section>
     {{- end }}
-    {{- with .Params.abstract }}
-    <details class="post-content">
-      <summary><strong>Abstract</strong></summary>
-      <div class="post-content">
-        {{ . | markdownify }}
-      </div>
-    </details>
-    {{- end }}
-    {{- with .Params.links }}
-    <details class="post-content">
-      <summary><strong>Links</strong></summary>
-      <div class="post-content">
-        <ul>
-          {{- range . }}
-          <li><a href="{{ .url }}">{{ .name }}</a></li>
-          {{- end }}
-        </ul>
-      </div>
-    </details>
-    {{- end }}
-    <br>
-    {{- if .Content }}
-    <div class="post-content">
-      {{- if not (.Param "disableAnchoredHeadings") }}
-      {{- partial "anchored_headings.html" .Content -}}
-      {{- else }}{{ .Content }}{{ end }}
-    </div>
-    {{- end }}
-    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
-    {{- if gt (len ($.GetTerms $tags)) 0 }}
-    <footer class="post-footer">
-      <ul class="post-tags">
-        {{- range ($.GetTerms $tags) }}
-        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-        {{- end }}
-      </ul>
-    </footer>
-    {{- end }}
-  </article>
   {{- end }}
-  {{- end }}
-{{- end }}
+</div>
 
 {{- end }}
