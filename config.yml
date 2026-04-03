@@ -80,7 +80,7 @@ params:
     hiddenInSingle: true
   label:
     text: "Bertille Daran"
-    icon: static/favicon.ico
+    icon: /favicon.ico
     iconHeight: 18
 
 markup:
