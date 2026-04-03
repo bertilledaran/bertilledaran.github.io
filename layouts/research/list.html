@@ -16,9 +16,9 @@
 {{- $published := where $pages "Params.researchSection" "published" }}
 
 {{- $sections := slice
-  (dict "id" "working-papers" "kicker" "In progress" "title" "Working papers"  "pages" $working)
-  (dict "id" "ongoing-work" "kicker" "In development" "title" "Ongoing work"  "pages" $ongoing)
-  (dict "id" "published-work" "kicker" "Published" "title" "Published work" "pages" $published)
+  (dict "id" "working-papers" "kicker" "Working papers" "pages" $working)
+  (dict "id" "ongoing-work" "kicker" "Ongoing work"  "pages" $ongoing)
+  (dict "id" "published-work" "kicker" "Published" "pages" $published)
 }}
 
 <div class="research-sections">
