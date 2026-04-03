@@ -5,16 +5,14 @@ summary: "Ongoing work on climate experts' views on agriculture in international
 author: ["Bertille Daran", "Basak Bayramoglu", "Christophe Cassen", "Laurent Lamy"]
 researchSection: "ongoing"
 weight: 20
+status: "Ongoing work"
+authorsDetailed:
+  - name: "Bertille Daran"
+  - name: "Basak Bayramoglu"
+    url: "https://sites.google.com/site/basakbayramoglu/home"
+  - name: "Christophe Cassen"
+    url: "https://www.centre-cired.fr/christophe-cassen/"
+  - name: "Laurent Lamy"
+    url: "https://sites.google.com/site/laurentlamy78/"
 abstract: "This project studies how climate experts position agriculture within international climate negotiations, using original survey responses."
 ---
-
-## Status
-
-Ongoing work.
-
-## Coauthors
-
-- [Basak Bayramoglu](https://sites.google.com/site/basakbayramoglu/home)
-- [Christophe Cassen](https://www.centre-cired.fr/christophe-cassen/)
-- [Laurent Lamy](https://sites.google.com/site/laurentlamy78/)
-

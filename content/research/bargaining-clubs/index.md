@@ -5,10 +5,8 @@ summary: "Ongoing work on survey responses and official text clusterings on UNFC
 author: ["Bertille Daran"]
 researchSection: "ongoing"
 weight: 10
+status: "Ongoing work"
+authorsDetailed:
+  - name: "Bertille Daran"
 abstract: "This project combines clustering of original survey evidence and UNFCCC official texts to study coalitions and bargaining patterns around agriculture-climate issues."
 ---
-
-## Status
-
-Ongoing work.
-

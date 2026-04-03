@@ -28,13 +28,36 @@
   </section>
   {{- range $section.pages }}
   <article class="post-single">
-    <header class="post-header">
-      <h2 class="post-title">{{ .Title }}</h2>
-      {{- if not (.Param "hideMeta") }}
-      <div class="post-meta">
-        {{- partial "post_meta.html" . -}}
+    <header class="entry-header">
+      <h3 class="entry-hint-parent">{{ .Title }}</h3>
+      <div class="entry-footer">
+        {{- $meta := slice }}
+        {{- if not .Date.IsZero }}
+          {{- $meta = $meta | append (printf "<span title='%s'>%s</span>" .Date (.Date | time.Format (default "January 2006" site.Params.DateFormat))) }}
+        {{- end }}
+        {{- with .Params.status }}
+          {{- $meta = $meta | append . }}
+        {{- end }}
+        {{- with .Params.authorsDetailed }}
+          {{- $authors := slice }}
+          {{- range . }}
+            {{- if .url }}
+              {{- $authors = $authors | append (printf "<a href='%s'>%s</a>" .url .name) }}
+            {{- else }}
+              {{- $authors = $authors | append .name }}
+            {{- end }}
+          {{- end }}
+          {{- $meta = $meta | append (delimit $authors ", ") }}
+        {{- else if not (.Param "hideAuthor") }}
+          {{- with (partial "author.html" .) }}
+            {{- $meta = $meta | append . }}
+          {{- end }}
+        {{- end }}
+        {{- with .Params.publication }}
+          {{- $meta = $meta | append . }}
+        {{- end }}
+        {{- delimit $meta "&nbsp;&middot;&nbsp;" | safeHTML -}}
       </div>
-      {{- end }}
     </header>
     {{- if (ne (.Param "hideSummary") true) }}
     <div class="post-content">
