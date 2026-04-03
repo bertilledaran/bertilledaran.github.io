@@ -1,8 +1,6 @@
 ---
 title: "Is overweight still a problem of the rich in sub-Saharan Africa?"
 date: 2022-03-01
-summary: "Published in World Development Perspectives (2022), with Pierre Levasseur."
-description: "Publication in World Development Perspectives, 2022."
 author: ["Bertille Daran", "Pierre Levasseur"]
 researchSection: "published"
 weight: 10
