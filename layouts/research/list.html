@@ -38,9 +38,9 @@
         {{- with .Params.status }}
           {{- $meta = $meta | append . }}
         {{- end }}
-        {{- with .Params.authorsDetailed }}
+        {{- if .Params.authorsDetailed }}
           {{- $authors := slice }}
-          {{- range . }}
+          {{- range .Params.authorsDetailed }}
             {{- if .url }}
               {{- $authors = $authors | append (printf "<a href='%s'>%s</a>" .url .name) }}
             {{- else }}
