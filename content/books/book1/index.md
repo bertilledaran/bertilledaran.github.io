@@ -1,6 +1,7 @@
 ---
 title: "Portugese Irregular Verbs" 
 date: 1997-01-01
+draft: true
 tags: ["Portugese","irregular verbs","philology"]
 author: ["Moritz-Maria von Igelfeld"]
 description: "This book discusses Portugese irregular verbs in great details."

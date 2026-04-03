@@ -1,6 +1,7 @@
 ---
 title: "Lectures at the Villa of Reduced Circumstances"
 date: 2003-03-10
+draft: true
 aliases: 
     - /courses/course2/slides4.pdf
     - /courses/course2/slides1.pdf

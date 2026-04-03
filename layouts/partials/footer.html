@@ -2,21 +2,21 @@
 <footer class="footer">
     {{- if not site.Params.footer.hideCopyright }}
     {{- if site.Copyright }}
-    <span>{{ site.Copyright | markdownify }}</span>
+    <span>&copy; {{ now.Year }} {{ site.Copyright | markdownify }}</span>
     {{- else }}
     <span>&copy; {{ now.Year }} {{ site.Title }}</span>
     {{- end }}
-    {{- print " · "}}
+    {{- print " | " }}
     {{- end }}
 
     {{- with site.Params.footer.text }}
     {{ . | markdownify }}
-    {{- print " · "}}
-    {{- end }}    
+    {{- print " | " }}
+    {{- end }}
     <span>
-    Powered by 
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">hugo</a>, <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">papermod</a>, &amp;
-        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">hugo-website</a>.
+    Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> and
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>.
     </span>
 </footer>
 {{- end }}
@@ -128,12 +128,9 @@
         if (container.classList.contains("highlight")) {
             container.appendChild(copybutton);
         } else if (container.parentNode.firstChild == container) {
-            // td containing LineNos
         } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            // table containing LineNos and code
             codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
         } else {
-            // code blocks not having highlight as parent class
             codeblock.parentNode.appendChild(copybutton);
         }
     });

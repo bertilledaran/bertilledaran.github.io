@@ -1,0 +1,204 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{parskip}
+\setlist{nosep}
+
+\title{Bertille Daran Website Editing Guide}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+This website is built with Hugo and the PaperMod theme.
+
+\section*{1. Important files}
+\begin{itemize}
+\item \texttt{config.yml}: homepage text, menu, social links, site-wide settings
+\item \texttt{static/profile.jpg}: profile photo shown on the homepage
+\item \texttt{static/cv.pdf}: PDF used by the CV page
+\item \texttt{static/jmp.pdf}: job market paper PDF
+\item \texttt{content/research/}: research pages
+\item \texttt{content/teaching/}: teaching pages
+\item \texttt{content/talks/}: talks and conference pages
+\item \texttt{content/location.md}: office and map page
+\item \texttt{content/cv.md}: CV page with embedded PDF
+\end{itemize}
+
+\section*{2. How to change the homepage text}
+Edit \texttt{config.yml}.
+
+The main text on the homepage is in:
+\begin{itemize}
+\item \texttt{params.profileMode.title}
+\item \texttt{params.profileMode.subtitle}
+\item \texttt{params.profileMode.buttons}
+\item \texttt{params.socialIcons}
+\end{itemize}
+
+Examples:
+\begin{itemize}
+\item change your displayed name: edit \texttt{params.profileMode.title}
+\item change your bio: edit \texttt{params.profileMode.subtitle}
+\item change the button labels or destinations: edit \texttt{params.profileMode.buttons}
+\item change email, GitHub, LinkedIn, Scholar, or location links: edit \texttt{params.socialIcons}
+\end{itemize}
+
+\section*{3. How to change the profile picture}
+Replace \texttt{static/profile.jpg} with a new image using the same filename.
+
+If you want a different filename, also update \texttt{params.profileMode.imageUrl} in \texttt{config.yml}.
+
+Recommended format:
+\begin{itemize}
+\item JPG or PNG
+\item square or close to square
+\item around 600 x 600 px or larger
+\end{itemize}
+
+\section*{4. How to change the menu}
+Edit the \texttt{menu.main} section in \texttt{config.yml}.
+
+Each item has:
+\begin{itemize}
+\item \texttt{name}: displayed label
+\item \texttt{url}: destination
+\item \texttt{weight}: order in the menu
+\end{itemize}
+
+\section*{5. How to edit research content}
+All research pages are in \texttt{content/research/}. Each subfolder is one page bundle and must contain an \texttt{index.md}.
+
+Current examples:
+\begin{itemize}
+\item \texttt{content/research/from-farm-to-cop/index.md}
+\item \texttt{content/research/obesity-reviews-2023/index.md}
+\item \texttt{content/research/world-development-perspectives-2022/index.md}
+\end{itemize}
+
+To edit text:
+\begin{enumerate}
+\item Open the page's \texttt{index.md}.
+\item Update the front matter at the top.
+\item Update the body text below the second \texttt{---}.
+\end{enumerate}
+
+Useful front matter fields:
+\begin{itemize}
+\item \texttt{title}
+\item \texttt{date}
+\item \texttt{summary}
+\item \texttt{description}
+\item \texttt{tags}
+\item \texttt{author}
+\end{itemize}
+
+To add a new research page:
+\begin{enumerate}
+\item Create a new folder inside \texttt{content/research/}.
+\item Add an \texttt{index.md} file.
+\item Copy an existing research page and modify it.
+\end{enumerate}
+
+\section*{6. How to edit teaching content}
+Teaching pages are in \texttt{content/teaching/}.
+
+Current examples:
+\begin{itemize}
+\item \texttt{content/teaching/microeconomics-1/index.md}
+\item \texttt{content/teaching/microeconomics-2/index.md}
+\end{itemize}
+
+Use the same workflow as for research pages.
+
+\section*{7. How to edit talks and conference content}
+Talk pages are in \texttt{content/talks/}.
+
+Current examples:
+\begin{itemize}
+\item \texttt{content/talks/year-2026/index.md}
+\item \texttt{content/talks/year-2025/index.md}
+\item \texttt{content/talks/year-2024/index.md}
+\item \texttt{content/talks/year-2023/index.md}
+\end{itemize}
+
+You can either keep one page per year or create one page per event.
+
+\section*{8. How to change links to PDFs}
+Static PDFs live in \texttt{static/}. Examples:
+\begin{itemize}
+\item \texttt{static/cv.pdf}
+\item \texttt{static/jmp.pdf}
+\end{itemize}
+
+Links to those files can be written directly as \texttt{/cv.pdf} and \texttt{/jmp.pdf}.
+
+\section*{9. How to edit the location page}
+Edit \texttt{content/location.md}.
+
+That page already contains office addresses and embedded Google Maps iframes. You can change the office name, room number, postal address, or iframe embed URL.
+
+\section*{10. How to preview locally}
+Make sure Hugo Extended is installed and available on your PATH.
+
+Useful commands:
+\begin{verbatim}
+hugo server -D
+hugo --gc --minify
+\end{verbatim}
+
+The preview server usually runs at \texttt{http://localhost:1313/}. Generated production files appear in \texttt{public/}.
+
+\section*{11. How deployment works}
+Deployment is handled by GitHub Actions with \texttt{.github/workflows/hugo.yml}.
+
+Required GitHub setting:
+\begin{itemize}
+\item in the repository's Pages settings, the source should be \texttt{GitHub Actions}
+\end{itemize}
+
+\section*{12. Common update recipes}
+\subsection*{Change your bio text}
+Edit \texttt{config.yml}, then change \texttt{params.profileMode.subtitle}.
+
+\subsection*{Change your email}
+Edit the \texttt{Email} item in \texttt{params.socialIcons} inside \texttt{config.yml}.
+
+\subsection*{Add a new paper}
+\begin{enumerate}
+\item Create \texttt{content/research/new-paper-slug/}
+\item Add \texttt{index.md}
+\item Copy front matter from an existing research page
+\item Add text and links
+\end{enumerate}
+
+\subsection*{Replace the CV}
+\begin{enumerate}
+\item Replace \texttt{static/cv.pdf}
+\item Keep the same filename if possible
+\item Check \texttt{content/cv.md}
+\end{enumerate}
+
+\subsection*{Replace the profile photo}
+\begin{enumerate}
+\item Replace \texttt{static/profile.jpg}
+\item Keep the same filename if possible
+\item Check \texttt{config.yml}
+\end{enumerate}
+
+\section*{13. Notes on old demo content}
+The original demo sections from the template were kept in the repo but marked as drafts so they do not surface on the rebuilt site:
+\begin{itemize}
+\item \texttt{content/books/}
+\item \texttt{content/courses/}
+\item \texttt{content/data/}
+\item \texttt{content/papers/}
+\end{itemize}
+
+They can be deleted later if you no longer need them.
+
+\end{document}

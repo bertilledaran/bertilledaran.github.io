@@ -2,3 +2,6 @@
 public/
 resources/
 .hugo_build.lock
+docs/*.aux
+docs/*.log
+docs/*.out
