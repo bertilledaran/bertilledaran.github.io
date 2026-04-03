@@ -27,21 +27,37 @@
     <h2>{{ $section.title }}</h2>
   </section>
   {{- range $section.pages }}
-  <article class="post-entry">
-    <header class="entry-header">
-      <h2 class="entry-hint-parent">{{ .Title }}</h2>
+  <article class="post-single">
+    <header class="post-header">
+      <h2 class="post-title">{{ .Title }}</h2>
+      {{- if not (.Param "hideMeta") }}
+      <div class="post-meta">
+        {{- partial "post_meta.html" . -}}
+      </div>
+      {{- end }}
     </header>
     {{- if (ne (.Param "hideSummary") true) }}
-    <div class="entry-content">
+    <div class="post-content">
       <p>{{ .Summary | plainify | htmlUnescape }}</p>
     </div>
     {{- end }}
-    {{- if not (.Param "hideMeta") }}
-    <footer class="entry-footer">
-      {{- partial "post_meta.html" . -}}
+    {{- if .Content }}
+    <div class="post-content">
+      {{- if not (.Param "disableAnchoredHeadings") }}
+      {{- partial "anchored_headings.html" .Content -}}
+      {{- else }}{{ .Content }}{{ end }}
+    </div>
+    {{- end }}
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    {{- if gt (len ($.GetTerms $tags)) 0 }}
+    <footer class="post-footer">
+      <ul class="post-tags">
+        {{- range ($.GetTerms $tags) }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        {{- end }}
+      </ul>
     </footer>
     {{- end }}
-    <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
   </article>
   {{- end }}
   {{- end }}
