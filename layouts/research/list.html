@@ -1,0 +1,50 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+
+{{- if .Content }}
+<div class="post-content">
+  {{ .Content }}
+</div>
+{{- end }}
+
+{{- $pages := .RegularPages.ByWeight }}
+{{- $working := where $pages "Params.researchSection" "working-paper" }}
+{{- $ongoing := where $pages "Params.researchSection" "ongoing" }}
+{{- $published := where $pages "Params.researchSection" "published" }}
+
+{{- $sections := slice
+  (dict "title" "Working Papers" "pages" $working)
+  (dict "title" "Ongoing Work" "pages" $ongoing)
+  (dict "title" "Published Work" "pages" $published)
+}}
+
+{{- range $section := $sections }}
+  {{- if gt (len $section.pages) 0 }}
+  <section class="post-content">
+    <h2>{{ $section.title }}</h2>
+  </section>
+  {{- range $section.pages }}
+  <article class="post-entry">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">{{ .Title }}</h2>
+    </header>
+    {{- if (ne (.Param "hideSummary") true) }}
+    <div class="entry-content">
+      <p>{{ .Summary | plainify | htmlUnescape }}</p>
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <footer class="entry-footer">
+      {{- partial "post_meta.html" . -}}
+    </footer>
+    {{- end }}
+    <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+  </article>
+  {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- end }}

@@ -161,7 +161,30 @@ Required GitHub setting:
 \item in the repository's Pages settings, the source should be \texttt{GitHub Actions}
 \end{itemize}
 
-\section*{12. Common update recipes}
+\section*{12. How to release a new version}
+In the normal setup, yes: committing and pushing to \texttt{main} is what releases the site.
+
+Typical workflow:
+\begin{enumerate}
+\item Edit content locally.
+\item Preview locally with \texttt{hugo server -D}.
+\item Build locally with \texttt{hugo --gc --minify}.
+\item Commit your changes.
+\item Push to \texttt{main}.
+\item Wait for the GitHub Actions workflow to finish.
+\item Open \texttt{https://bertilledaran.github.io/} and hard-refresh the page.
+\end{enumerate}
+
+Useful commands:
+\begin{verbatim}
+git add .
+git commit -m "Update website content"
+git push origin main
+\end{verbatim}
+
+If the workflow fails, open the repository's Actions tab and inspect the \texttt{Deploy Hugo site to Pages} run.
+
+\section*{13. Common update recipes}
 \subsection*{Change your bio text}
 Edit \texttt{config.yml}, then change \texttt{params.profileMode.subtitle}.
 
@@ -190,7 +213,7 @@ Edit the \texttt{Email} item in \texttt{params.socialIcons} inside \texttt{confi
 \item Check \texttt{config.yml}
 \end{enumerate}
 
-\section*{13. Notes on old demo content}
+\section*{14. Notes on old demo content}
 The original demo sections from the template were kept in the repo but marked as drafts so they do not surface on the rebuilt site:
 \begin{itemize}
 \item \texttt{content/books/}

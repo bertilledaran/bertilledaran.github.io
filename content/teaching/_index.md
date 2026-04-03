@@ -3,6 +3,6 @@ title: "Teaching"
 description: "Teaching assistant work in graduate microeconomics."
 ---
 
-My teaching experience currently consists of teaching assistant sessions in graduate microeconomics at ENSAE Paris.
+**Microeconomics 1**, ENSAE Paris. Instructor: Philippe Chone. Graduate level. Fall 2023 and Fall 2024. 72 hours.
 
-The entries below summarize the courses, instructors, level, and teaching load.
+**Microeconomics 2**, ENSAE Paris. Instructor: Laurent Linnemer. Graduate level. Spring 2024. 13 hours.

@@ -3,8 +3,21 @@ title: "Research"
 description: "Publications, job market paper, and current projects."
 ---
 
-My research focuses on international climate negotiations, land use, agriculture, livestock, forests, and related international flows such as trade and climate aid.
+My research focuses on climate diplomacy, land use, agriculture, livestock, forests, and international flows such as trade and climate aid.
 
-I combine different empirical and theoretical approaches, including general equilibrium modelling, game theory, advanced econometrics, survey design, and textual analysis.
+I combine theoretical and empirical approaches, including general equilibrium modelling, game theory, advanced econometrics, survey design, and text analysis.
 
-The page below highlights published work and current projects. My job market paper is available as a PDF: [Download the JMP](/jmp.pdf).
+## Research Interests
+
+- International environmental agreements
+- Agricultural trade
+- Land-use choices
+- General equilibrium modelling
+- Game theory
+- Survey design and analysis
+- Spatial and causal econometrics
+- Text analysis and NLP
+
+## Research Portfolio
+
+The projects below are grouped into working papers, ongoing work, and published work.

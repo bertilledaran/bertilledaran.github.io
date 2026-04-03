@@ -5,6 +5,8 @@ summary: "Published in World Development Perspectives (2022), with Pierre Levass
 description: "Publication in World Development Perspectives, 2022."
 tags: ["publication", "health economics", "sub-Saharan Africa"]
 author: ["Bertille Daran", "Pierre Levasseur"]
+researchSection: "published"
+weight: 10
 ---
 
 ## Publication

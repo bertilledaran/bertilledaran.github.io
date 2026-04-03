@@ -22,9 +22,6 @@ menu:
     - name: Talks
       url: talks/
       weight: 30
-    - name: CV
-      url: cv/
-      weight: 40
 
 params:
   description: "Academic website of Bertille Daran, PhD candidate in environmental economics."
@@ -52,7 +49,7 @@ params:
   profileMode:
     enabled: true
     title: Bertille Daran
-    subtitle: "PhD candidate in environmental economics at [Paris-Saclay Applied Economics (PSAE)](https://eng-psae.versailles-saclay.hub.inrae.fr/) and [CIRED](https://www.centre-cired.fr/en/), under the supervision of [Basak Bayramoglu](https://sites.google.com/site/basakbayramoglu/home) and [Laurent Lamy](https://sites.google.com/site/laurentlamy78/vitae). My research links international climate negotiations to land and land use, with a particular focus on agriculture, livestock, and forests."
+    subtitle: "**Environmental economist with a PhD from Institut Polytechnique Paris** ([manuscript](/jmp.pdf), slides). Graduated in February 2026.  \n\nMy research focuses on the interdependencies between international flows, both economic and human, and land cover and land use. My thesis addresses three dimensions of climate diplomacy: negotiations, cooperation, and finance. I combine quantitative spatial models and advanced econometric techniques with complementary methods such as natural language processing and elite surveys.  \n\nI will begin a position as a postdoctoral fellow at Universite Paris Dauphine-PSL in Fall 2026.  \n\nFeel free to reach out by [email](mailto:bertille.daran@sciencespo.fr)."
     imageUrl: "profile.jpg"
     imageWidth: 180
     imageHeight: 180
@@ -63,8 +60,6 @@ params:
         url: teaching/
       - name: Talks
         url: talks/
-      - name: CV
-        url: cv/
   socialIcons:
     - name: CV
       url: cv/

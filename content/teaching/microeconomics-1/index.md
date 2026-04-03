@@ -1,6 +1,7 @@
 ---
 title: "Microeconomics 1"
 date: 2024-09-01
+draft: true
 summary: "Teaching assistant, ENSAE Paris, graduate level."
 description: "TA sessions for Microeconomics 1."
 tags: ["teaching", "microeconomics", "ENSAE Paris"]

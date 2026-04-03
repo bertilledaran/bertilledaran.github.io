@@ -187,7 +187,31 @@ Required GitHub setting:
 
 - in the repository's Pages settings, the source should be `GitHub Actions`
 
-## 12. Common update recipes
+## 12. How to release a new version
+
+In the normal setup, yes: committing and pushing to `main` is what releases the site.
+
+Typical workflow:
+
+1. Edit content locally.
+2. Preview locally with `hugo server -D`.
+3. Build locally with `hugo --gc --minify`.
+4. Commit your changes.
+5. Push to `main`.
+6. Wait for the GitHub Actions workflow to finish.
+7. Open `https://bertilledaran.github.io/` and hard-refresh the page.
+
+Useful commands:
+
+```powershell
+git add .
+git commit -m "Update website content"
+git push origin main
+```
+
+If the workflow fails, open the repository's `Actions` tab and inspect the `Deploy Hugo site to Pages` run.
+
+## 13. Common update recipes
 
 ### Change your bio text
 
@@ -216,7 +240,7 @@ Edit the `Email` item in `params.socialIcons` inside `config.yml`.
 2. Keep the same filename if possible
 3. Check `config.yml`
 
-## 13. Notes on old demo content
+## 14. Notes on old demo content
 
 The original demo sections from the template were kept in the repo but marked as drafts so they do not surface on the rebuilt site:
 
