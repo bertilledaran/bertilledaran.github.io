@@ -1,8 +1,6 @@
 ---
 title: "Updating the association between socioeconomic status and obesity in low-income and lower-middle-income sub-Saharan African countries"
 date: 2023-07-06
-summary: "Published in Obesity Reviews (2023), with Pierre Levasseur and Matthieu Clement."
-description: "Publication in Obesity Reviews, 2023."
 author: ["Bertille Daran", "Pierre Levasseur", "Matthieu Clement"]
 researchSection: "published"
 weight: 20
