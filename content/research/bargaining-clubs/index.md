@@ -1,9 +1,7 @@
 ---
-title: "Bargaining clubs?"
-date: 2026-01-01
-summary: "Survey-based and UNFCCC text clustering on agriculture-climate issues."
-description: "Work in progress on survey evidence and text clustering."
-tags: ["work in progress", "survey analysis", "text analysis", "UNFCCC"]
+title: "Bargaining clubs? Survey-based and UNFCCC text clustering on agriculture-climate issues"
+date: 2025-12-01
+summary: "Ongoing work on survey responses and official text clusterings on UNFCCC negotiations."
 author: ["Bertille Daran"]
 researchSection: "ongoing"
 weight: 10
@@ -11,8 +9,8 @@ weight: 10
 
 ## Status
 
-Work in progress.
+Ongoing work.
 
 ## Overview
 
-This project combines survey evidence and clustering of UNFCCC texts to study coalitions and bargaining patterns around agriculture-climate issues.
+This project combines clustering of original survey evidence and UNFCCC official texts to study coalitions and bargaining patterns around agriculture-climate issues.
