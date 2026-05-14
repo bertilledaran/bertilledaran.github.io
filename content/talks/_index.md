@@ -1,5 +1,5 @@
 ---
-title: "Talks"
+title: "Talks (* scheduled)"
 ---
 
 **2026:** ADRES Job Market Conference, CLand workshop, 100th AES conference, EENR Orléans 2026, Junior CESifo Workshop on Energy and Climate Economics 2026, WCERE 2026*
