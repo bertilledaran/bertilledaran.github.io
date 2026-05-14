@@ -15,12 +15,12 @@
 {{- $pages := .RegularPages.ByWeight }}
 {{- $working := where $pages "Params.researchSection" "working-paper" }}
 {{- $ongoing := where $pages "Params.researchSection" "ongoing" }}
-{{- $other := where $pages "Params.researchSection" "other-publication" }}
+{{- $other := where $pages "Params.researchSection" "published" }}
 
 {{- $sections := slice
   (dict "id" "working-papers" "title" "Working papers" "pages" $working)
   (dict "id" "ongoing-work" "title" "Ongoing work" "pages" $ongoing)
-  (dict "id" "other-publications" "title" "Other publications" "pages" $published)
+  (dict "id" "other-publications" "title" "Other publications" "pages" $other)
 }}
 
 <div class="research-sections">
