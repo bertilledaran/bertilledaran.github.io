@@ -1,6 +1,5 @@
 ---
 title: "Teaching"
-description: "Teaching assistant work in graduate microeconomics."
 ---
 
 [**Microeconomics 1**](https://www.ensae.fr/en/courses/5842-microeconomie-1), ENSAE Paris. Instructor: Philippe Choné. Graduate level. Fall 2023 and Fall 2024. 72 hours.
