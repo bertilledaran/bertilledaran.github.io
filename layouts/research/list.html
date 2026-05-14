@@ -99,7 +99,11 @@
                 <div class="research-paper-toggle-body">
                   {{- range $index, $link := . }}
                     {{- if gt $index 0 }}<span class="research-paper-link-sep">, </span>{{- end }}
-                    <a href="{{ $link.url }}">{{ $link.name }}</a>
+                    {{- if $link.url }}
+                      <a href="{{ $link.url }}">{{ $link.name }}</a>
+                    {{- else }}
+                      <span class="research-paper-link-text">{{ $link.name }}</span>
+                    {{- end }}
                   {{- end }}
                 </div>
               </details>
@@ -109,7 +113,11 @@
                 <div class="research-paper-section-body research-paper-links">
                   {{- range $index, $link := . }}
                     {{- if gt $index 0 }}<span class="research-paper-link-sep">, </span>{{- end }}
-                    <a href="{{ $link.url }}">{{ $link.name }}</a>
+                    {{- if $link.url }}
+                      <a href="{{ $link.url }}">{{ $link.name }}</a>
+                    {{- else }}
+                      <span class="research-paper-link-text">{{ $link.name }}</span>
+                    {{- end }}
                   {{- end }}
                 </div>
               </div>
