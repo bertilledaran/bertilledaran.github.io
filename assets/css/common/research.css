@@ -1,184 +1,176 @@
+.research-page-header .post-description,
+.research-page-intro,
+.research-sections,
+.research-sections a {
+    color: #4b4b4b;
+}
+
+.research-page-header a,
+.research-page-intro a,
+.research-sections a {
+    color: #4b4b4b;
+    text-decoration-color: rgba(75, 75, 75, 0.45);
+}
+
+.research-page-header a:hover,
+.research-page-intro a:hover,
+.research-sections a:hover {
+    color: #2f2f2f;
+    text-decoration-color: rgba(47, 47, 47, 0.7);
+}
+
+.research-page-intro {
+    margin-top: 0;
+}
+
 .research-sections {
     display: grid;
-    gap: calc(var(--gap) * 1.5);
-    margin-top: calc(var(--gap) * 1.25);
+    gap: 2.25rem;
+    margin-top: 2rem;
 }
 
 .research-section {
-    padding: clamp(20px, 2.8vw, 32px);
-    background: var(--entry);
-    border: 1px solid var(--border);
-    border-radius: calc(var(--radius) * 1.5);
+    padding-top: 0.25rem;
 }
 
 .research-section-header {
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
+    align-items: baseline;
     gap: var(--gap);
-    margin-bottom: var(--gap);
-    padding-bottom: calc(var(--gap) * 0.75);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
     border-bottom: 1px solid var(--border);
 }
 
-.research-section-header h2 {
+.research-section-heading h2 {
     margin: 0;
     font-size: clamp(24px, 3vw, 30px);
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
 .research-section-description {
-    margin: 8px 0 0;
+    margin: 0.35rem 0 0;
     color: var(--secondary);
+    font-size: 15px;
 }
 
 .research-section-count {
     flex-shrink: 0;
     margin: 0;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(106, 123, 162, 0.1);
-    color: var(--primary);
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.research-paper-list {
-    display: grid;
-    gap: 18px;
-}
-
-.research-paper-card {
-    padding: clamp(18px, 2.4vw, 26px);
-    background: var(--theme);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-}
-
-.research-paper-header {
-    display: grid;
-    gap: 8px;
-}
-
-.research-paper-title {
-    margin: 0;
-    font-size: clamp(22px, 2.8vw, 28px);
-    line-height: 1.2;
-}
-
-.research-paper-title a {
-    color: inherit;
-}
-
-.research-paper-status {
-    margin: 0;
-    color: var(--darkcolor);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.research-paper-meta {
     color: var(--secondary);
     font-size: 14px;
 }
 
-.research-paper-summary {
-    margin-top: 14px;
+.research-paper-list {
+    display: grid;
+    gap: 1.5rem;
 }
 
-.research-paper-summary p:last-child,
-.research-paper-section-body > *:last-child {
-    margin-bottom: 0;
+.research-paper {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.research-paper-header {
+    display: grid;
+    gap: 0.2rem;
+}
+
+.research-paper-title {
+    margin: 0;
+    font-size: clamp(20px, 2.6vw, 26px);
+    line-height: 1.2;
+}
+
+.research-paper-status {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary);
+}
+
+.research-paper-meta {
+    margin: 0;
+    color: var(--secondary);
+    font-size: 0.95rem;
 }
 
 .research-paper-sections {
     display: grid;
-    gap: 12px;
-    margin-top: 16px;
+    gap: 0.75rem;
 }
 
-.research-paper-panel,
-.research-paper-section-block {
+.research-paper-section,
+.research-paper-toggle {
     margin: 0;
-    padding: 0;
-    border: 0;
 }
 
-.research-paper-panel {
-    padding: 14px 16px;
-    background: var(--entry);
-    border: 1px solid var(--border);
-    border-radius: calc(var(--radius) * 1.1);
-}
-
-.research-paper-panel summary {
-    cursor: pointer;
-    list-style: none;
-}
-
-.research-paper-panel summary::-webkit-details-marker {
-    display: none;
-}
-
-.research-paper-panel summary strong {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
+.research-paper-label,
+.research-paper-toggle summary span {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    color: var(--secondary);
 }
 
-.research-paper-panel summary strong::before {
-    content: "+";
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: rgba(106, 123, 162, 0.12);
-    color: var(--darkcolor);
-    font-size: 14px;
-    line-height: 1;
-}
-
-.research-paper-panel[open] summary strong::before {
-    content: "-";
-}
-
-.research-paper-section-block h4 {
-    margin: 0 0 8px;
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.research-paper-section-body {
-    margin-top: 12px;
+.research-paper-section-body,
+.research-paper-toggle-body {
+    margin-top: 0.35rem;
+    color: var(--content);
     text-align: justify;
     text-justify: inter-word;
 }
 
-.research-paper-section-body ul {
-    margin: 0;
+.research-paper-section-body > *:last-child,
+.research-paper-toggle-body > *:last-child {
+    margin-bottom: 0;
 }
 
-.dark .research-section,
-.dark .research-paper-card,
-.dark .research-paper-panel {
-    background: var(--entry);
+.research-paper-toggle {
+    padding-top: 0.15rem;
+}
+
+.research-paper-toggle summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.research-paper-toggle summary::-webkit-details-marker {
+    display: none;
+}
+
+.research-paper-link-sep {
+    color: var(--secondary);
+}
+
+.dark .research-page-header .post-description,
+.dark .research-page-intro,
+.dark .research-sections {
+    color: #d0d0d0;
+}
+
+.dark .research-page-header a,
+.dark .research-page-intro a,
+.dark .research-sections a {
+    color: #d0d0d0;
+    text-decoration-color: rgba(208, 208, 208, 0.45);
+}
+
+.dark .research-page-header a:hover,
+.dark .research-page-intro a:hover,
+.dark .research-sections a:hover {
+    color: #f0f0f0;
+    text-decoration-color: rgba(240, 240, 240, 0.75);
 }
 
 @media (max-width: 768px) {
     .research-section-header {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .research-section-count {
-        align-self: flex-start;
     }
 }

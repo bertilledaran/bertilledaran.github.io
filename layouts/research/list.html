@@ -1,6 +1,6 @@
 {{- define "main" }}
 
-<header class="page-header">
+<header class="page-header research-page-header">
   <h1>{{ .Title }}</h1>
   {{- with .Description }}
   <div class="post-description">
@@ -10,7 +10,7 @@
 </header>
 
 {{- if .Content }}
-<div class="post-content">
+<div class="post-content research-page-intro">
   {{- if not (.Param "disableAnchoredHeadings") }}
   {{- partial "anchored_headings.html" .Content -}}
   {{- else }}{{ .Content }}{{ end }}
@@ -23,8 +23,8 @@
 {{- $published := where $pages "Params.researchSection" "published" }}
 
 {{- $sections := slice
-  (dict "id" "working-papers" "title" "Working papers" "description" "Papers currently in progress or on the job market." "pages" $working)
-  (dict "id" "ongoing-work" "title" "Ongoing work" "description" "Projects that are still being developed." "pages" $ongoing)
+  (dict "id" "working-papers" "title" "Working papers" "description" "Current projects and the job market paper." "pages" $working)
+  (dict "id" "ongoing-work" "title" "Ongoing work" "description" "Projects still in development." "pages" $ongoing)
   (dict "id" "published-work" "title" "Published" "description" "Published articles." "pages" $published)
 }}
 
@@ -33,7 +33,7 @@
     {{- if gt (len $section.pages) 0 }}
     <section class="research-section" id="{{ $section.id }}">
       <header class="research-section-header">
-        <div>
+        <div class="research-section-heading">
           <h2>{{ $section.title }}</h2>
           <p class="research-section-description">{{ $section.description }}</p>
         </div>
@@ -43,20 +43,18 @@
       <div class="research-paper-list">
         {{- range $section.pages }}
         {{- $page := . }}
-        {{- $wrapSections := ne ($page.Param "wrapSections") false }}
-        <article class="research-paper-card">
-          <header class="entry-header research-paper-header">
-            <h3 class="entry-hint-parent research-paper-title">
+        {{- $wrapSections := eq ($page.Param "wrapSections") true }}
+        <article class="research-paper">
+          <header class="research-paper-header">
+            <h3 class="research-paper-title">
               <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
             </h3>
             {{- with $page.Params.status }}
             <p class="research-paper-status">{{ . }}</p>
             {{- end }}
-            <div class="entry-footer research-paper-meta">
+
+            <p class="research-paper-meta">
               {{- $meta := slice }}
-              {{- if not $page.Date.IsZero }}
-                {{- $meta = $meta | append (printf "<span title='%s'>%s</span>" $page.Date ($page.Date | time.Format (default "January 2006" site.Params.DateFormat))) }}
-              {{- end }}
               {{- if $page.Params.authorsDetailed }}
                 {{- $authors := slice }}
                 {{- range $page.Params.authorsDetailed }}
@@ -72,61 +70,56 @@
                   {{- $meta = $meta | append . }}
                 {{- end }}
               {{- end }}
+              {{- if not $page.Date.IsZero }}
+                {{- $meta = $meta | append ($page.Date | time.Format (default "January 2006" site.Params.DateFormat)) }}
+              {{- end }}
               {{- with $page.Params.publication }}
                 {{- $meta = $meta | append . }}
               {{- end }}
-              {{- delimit $meta "&nbsp;&middot;&nbsp;" | safeHTML -}}
-            </div>
+              {{- delimit $meta " &middot; " | safeHTML -}}
+            </p>
           </header>
-
-          {{- if (ne ($page.Param "hideSummary") true) }}
-          <div class="post-content research-paper-summary">
-            <p>{{ $page.Summary | plainify | htmlUnescape }}</p>
-          </div>
-          {{- end }}
 
           <div class="research-paper-sections">
             {{- with $page.Params.abstract }}
               {{- if $wrapSections }}
-              <details class="research-paper-panel">
-                <summary><strong>Abstract</strong></summary>
-                <div class="post-content research-paper-section-body">
+              <details class="research-paper-toggle">
+                <summary><span>Abstract</span></summary>
+                <div class="research-paper-toggle-body post-content">
                   {{ . | markdownify }}
                 </div>
               </details>
               {{- else }}
-              <section class="research-paper-section-block">
-                <h4>Abstract</h4>
-                <div class="post-content research-paper-section-body">
+              <div class="research-paper-section">
+                <span class="research-paper-label">Abstract</span>
+                <div class="research-paper-section-body post-content">
                   {{ . | markdownify }}
                 </div>
-              </section>
+              </div>
               {{- end }}
             {{- end }}
 
             {{- with $page.Params.links }}
               {{- if $wrapSections }}
-              <details class="research-paper-panel">
-                <summary><strong>Links</strong></summary>
-                <div class="post-content research-paper-section-body">
-                  <ul>
-                    {{- range . }}
-                    <li><a href="{{ .url }}">{{ .name }}</a></li>
-                    {{- end }}
-                  </ul>
+              <details class="research-paper-toggle">
+                <summary><span>Links</span></summary>
+                <div class="research-paper-toggle-body">
+                  {{- range $index, $link := . }}
+                    {{- if gt $index 0 }}<span class="research-paper-link-sep">, </span>{{- end }}
+                    <a href="{{ $link.url }}">{{ $link.name }}</a>
+                  {{- end }}
                 </div>
               </details>
               {{- else }}
-              <section class="research-paper-section-block">
-                <h4>Links</h4>
-                <div class="post-content research-paper-section-body">
-                  <ul>
-                    {{- range . }}
-                    <li><a href="{{ .url }}">{{ .name }}</a></li>
-                    {{- end }}
-                  </ul>
+              <div class="research-paper-section">
+                <span class="research-paper-label">Links</span>
+                <div class="research-paper-section-body research-paper-links">
+                  {{- range $index, $link := . }}
+                    {{- if gt $index 0 }}<span class="research-paper-link-sep">, </span>{{- end }}
+                    <a href="{{ $link.url }}">{{ $link.name }}</a>
+                  {{- end }}
                 </div>
-              </section>
+              </div>
               {{- end }}
             {{- end }}
           </div>
