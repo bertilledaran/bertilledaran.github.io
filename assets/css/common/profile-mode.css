@@ -18,6 +18,13 @@
     gap: 10px;
 }
 
+.profile .profile_inner > span {
+    display: block;
+    max-width: 72ch;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .profile .profile_inner h1 {
     font-size: 2.5rem;
 }
