@@ -43,7 +43,7 @@
       <div class="research-paper-list">
         {{- range $section.pages }}
         {{- $page := . }}
-        {{- $wrapSections := eq ($page.Param "wrapSections") true }}
+        {{- $wrapSections := ne ($page.Param "wrapSections") false }}
         <article class="research-paper">
           <header class="research-paper-header">
             <h3 class="research-paper-title">
